@@ -4,5 +4,5 @@ import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: '/portfolio-new/' // Must match the repo name exactly
+  base: process.env.NODE_ENV === 'production' ? '/3d_Portfolio/' : '/'
 })
